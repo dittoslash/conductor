@@ -1,5 +1,5 @@
 # conductor
-Web dashboard for controlling cluster computers
+Web dashboard for controlling cluster computers [![Build Status](https://dittoslash.uk/jenkins/job/conductor/job/master/badge/icon)](https://dittoslash.uk/jenkins/job/conductor/job/master/)
 
 ![screenshot](https://dittoslash.uk/conductor.png)
 
