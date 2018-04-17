@@ -18,7 +18,7 @@ pipeline {
           steps {
             sh '''cd client
 /usr/local/go/bin/go build -o conductor-x86'''
-            archiveArtifacts 'client/conductor-arm'
+            archiveArtifacts 'client/conductor-x86'
           }
         }
       }
