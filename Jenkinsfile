@@ -8,8 +8,8 @@ pipeline {
             node(label: 'rpi') {
               git(url: 'https://github.com/dittoslash/conductor.git', branch: 'master')
               sh '''cd client
-/usr/local/go/bin/go build'''
-              archiveArtifacts 'conductor'
+/usr/local/go/bin/go build -o conductor-arm'''
+              archiveArtifacts 'conductor-arm'
             }
 
           }
@@ -17,8 +17,8 @@ pipeline {
         stage('Compile X86') {
           steps {
             sh '''cd client
-/usr/local/go/bin/go build'''
-            archiveArtifacts 'conductor'
+/usr/local/go/bin/go build -o conductor-x86'''
+            archiveArtifacts 'conductor-x86'
           }
         }
       }
