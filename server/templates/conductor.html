@@ -1,0 +1,30 @@
+<head>
+	<title> Conductor </title>
+	<script>
+		function ajax(d) {
+			var r = new XMLHttpRequest();
+			r.open("GET", d);
+			r.send();
+		}
+		function reboot(n) {
+			ajax("/reboot-" + n)
+		}
+		function alldown() {
+			ajax("/shutdown")
+			setTimeout(function() {ajax("/shutdownp")}, 5000)
+		}
+		setTimeout(window.location.reload.bind(window.location), 15000);
+	</script>
+	<style>
+	</style>
+</head>
+<body>
+	<h1> Conductor </h1>
+	<table>
+	{% for ip, name, status, n in iterator %}
+		<tr><td>{{name}}</td><td>({{ip}})</td><td>{%if status[0]%}Online{%else%}Offline{%endif%}{% for n, s in status[1].Checks %} {{n}}: {{s}} {% endfor %}</td><td><button onclick="reboot({{n}})">Reboot</button></td></tr>
+	{% endfor %}
+	</table>
+	<button onclick="ajax('/shutdown')"> Shutdown Secondaries </button>
+	<button onclick="alldown()"> Shutdown Primary </button>
+</body>
