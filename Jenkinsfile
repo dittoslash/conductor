@@ -7,7 +7,7 @@ pipeline {
           steps {
             node(label: 'rpi') {
               git(url: 'https://github.com/dittoslash/conductor.git', branch: 'master')
-              sh 'go build'
+              sh '/usr/local/go/bin/go build'
               archiveArtifacts 'conductor'
             }
 
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Compile X86') {
           steps {
-            sh 'go build'
+            sh '/usr/local/go/bin/go build'
             archiveArtifacts 'conductor'
           }
         }
