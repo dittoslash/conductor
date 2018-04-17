@@ -6,7 +6,7 @@ Web dashboard for controlling cluster computers [![Build Status](https://dittosl
 ## Instructions
 1. Install Python 3, [Requests](http://docs.python-requests.org/en/master/), and [Flask](http://flask.pocoo.org/) on the computer you want the webserver on.
 2. Download the server/ directory onto the server.
-3. Download ConductorClient onto each client computer (the ones being controlled).
+3. Download ConductorClient (from [here](https://dittoslash.uk/jenkins/job/conductor/job/master/)) onto each client computer (the ones being controlled).
 4. Make sure the clients have passwordless sudo for reboot and shutdown.
 5. Add the IPs and names of each client to the `IPS` and `NAMES` variables in `main.py` on the server.
 6. Setup the `stats` file on the clients (see below).
