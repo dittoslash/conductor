@@ -1,6 +1,8 @@
 # conductor
 Web dashboard for controlling cluster computers
 
+![screenshot](https://dittoslash.uk/conductor.png)
+
 ## Instructions
 1. Install Python 3, [Requests](http://docs.python-requests.org/en/master/), and [Flask](http://flask.pocoo.org/) on the computer you want the webserver on.
 2. Download the server/ directory onto the server.
