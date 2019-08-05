@@ -3,7 +3,7 @@ Web dashboard for monitoring small computing clusters
 This tool is designed for smaller clusters - the part which pings a client times out after 3 seconds and doesn't run in parallell so if you have 5 offline nodes it'll take like 15 seconds to go through that. So if your cluster is consisted of >5 nodes, you might want a different tool. 10 is probably the max - if you're managing a cluster of that size you'll probably be doing more with them than this tool can provide you. This tool is designed for hobbyist cluster projects and works well in a web browser on a touchscreen attached to the server, from experience.  
 Designed for [Rocketbootkid](https://twitter.com/rocketbootkid)'s [BASKETS cluster project](http://rcpaterson.co.uk/blog/test/building-pen-test-baskets/).
 
-![screenshot](https://dittoslash.uk/conductor.png)
+![screenshot](https://dittoslash.uk/pub/conductor.png)
 
 ## Instructions
 1. Install Python 3, [Requests](http://docs.python-requests.org/en/master/), and [Flask](http://flask.pocoo.org/) on the computer you want the webserver on.
